@@ -1,0 +1,53 @@
+
+[
+  {
+    "question": "What was Apple's total net sales for fiscal year 2025?",
+    "expected_answer": "$416,161 million (~$416 billion)",
+    "answer_location_keywords": ["net sales", "416,161"]
+  },
+  {
+    "question": "How much did Apple's net sales grow compared to the prior year?",
+    "expected_answer": "6% increase",
+    "answer_location_keywords": ["net sales", "increase", "6%"]
+  },
+  {
+    "question": "How many shares of common stock were outstanding as of October 17, 2025?",
+    "expected_answer": "14,776,353,000 shares",
+    "answer_location_keywords": ["shares", "outstanding", "14,776"]
+  },
+  {
+    "question": "What was the aggregate market value of Apple's stock held by non-affiliates as of March 28, 2025?",
+    "expected_answer": "approximately $3,253,431,000,000",
+    "answer_location_keywords": ["aggregate market value", "non-affiliates", "3,253"]
+  },
+  {
+    "question": "Approximately how many full-time equivalent employees did Apple have as of fiscal year-end 2025?",
+    "expected_answer": "approximately 166,000",
+    "answer_location_keywords": ["full-time equivalent", "employees", "166,000"]
+  },
+  {
+    "question": "How does Apple organize its business results by geography?",
+    "expected_answer": "Americas, Europe, Greater China, Japan, and Rest of Asia Pacific",
+    "answer_location_keywords": ["Americas", "Europe", "Greater China", "segments"]
+  },
+  {
+    "question": "What percentage split between direct and indirect sales channels did Apple report for 2025?",
+    "expected_answer": "40% direct, 60% indirect",
+    "answer_location_keywords": ["direct channels", "indirect channels", "40%", "60%"]
+  },
+  {
+    "question": "What is one key risk factor Apple cites related to trade policy?",
+    "expected_answer": "New U.S. tariffs announced beginning in fiscal Q2 2025",
+    "answer_location_keywords": ["tariffs", "risk factors"]
+  },
+  {
+    "question": "What is one key risk factor related to Apple's supply chain?",
+    "expected_answer": "Supply chain concentration in Asia",
+    "answer_location_keywords": ["supply chain", "concentration", "Asia"]
+  },
+  {
+    "question": "What did Apple report as foreign pretax earnings for fiscal 2025?",
+    "expected_answer": "$82.0 billion",
+    "answer_location_keywords": ["foreign pretax earnings", "82.0 billion"]
+  }
+]

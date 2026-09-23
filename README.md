@@ -17,7 +17,7 @@ Traditional RAG pipelines rely purely on dense vector similarity for retrieval, 
 
 Hybrid retrieval improved Recall@5 by 20 percentage points on a 10-question evaluation set built from the filing's financial statements, risk factors, and business overview sections.
 
-**Why the improvement:** Several baseline misses were exact-fact lookups (e.g. "how many employees," "what percentage split between direct/indirect sales") where dense embeddings retrieved semantically-similar but factually-wrong chunks — often converging on the same generic "financial statements" section regardless of the specific question. BM25's keyword matching directly catches specific terms and numbers that vector search alone missed.
+**Why the improvement:** Several baseline misses were exact-fact lookups (e.g. "how many employees," "what percentage split between direct/indirect sales") where dense embeddings retrieved semantically-similar but factually-wrong chunks, often converging on the same generic "financial statements" section regardless of the specific question. BM25's keyword matching directly catches specific terms and numbers that vector search alone missed.
 
 ## Architecture
 PDF Document
@@ -81,7 +81,7 @@ python src/eval_hybrid.py      # hybrid Recall@5
 
 ## Evaluation Methodology
 
-A 10-question evaluation set was built by manually reading the filing and recording ground-truth answers alongside keywords expected to appear in the correct source chunk. Recall@5 measures whether all expected keywords for a question appear within the top-5 retrieved chunks — a proxy for "did retrieval surface the right information," independent of generation quality. -- proportion of actual positive cases a model actually identifies
+A 10-question evaluation set was built by manually reading the filing and recording ground-truth answers alongside keywords expected to appear in the correct source chunk. Recall@5 measures whether all expected keywords for a question appear within the top-5 retrieved chunks: "did retrieval surface the right information," independent of generation quality. -- proportion of actual positive cases a model actually identifies
 
 ## Known Limitations
 

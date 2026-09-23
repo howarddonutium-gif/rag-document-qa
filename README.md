@@ -53,7 +53,7 @@ embeddings.py # Embedding generation + FAISS index build
 retrieve.py # Dense vector retrieval
 hybrid_retrieve.py # BM25 + vector hybrid retrieval
 generate.py # LLM answer generation grounded in retrieved context
-eval.py # Recall@k evaluation (vector-only)
+eval.py # Recall@k evaluation (vector-only) 
 eval_hybrid.py # Recall@k evaluation (hybrid)
 docs/
 eval_set.json # 10 hand-written Q&A pairs with source keywords
@@ -81,14 +81,14 @@ python src/eval_hybrid.py      # hybrid Recall@5
 
 ## Evaluation Methodology
 
-A 10-question evaluation set was built by manually reading the filing and recording ground-truth answers alongside keywords expected to appear in the correct source chunk. Recall@5 measures whether all expected keywords for a question appear within the top-5 retrieved chunks — a proxy for "did retrieval surface the right information," independent of generation quality.
+A 10-question evaluation set was built by manually reading the filing and recording ground-truth answers alongside keywords expected to appear in the correct source chunk. Recall@5 measures whether all expected keywords for a question appear within the top-5 retrieved chunks — a proxy for "did retrieval surface the right information," independent of generation quality. -- proportion of actual positive cases a model actually identifies
 
 ## Known Limitations
 
-- Small evaluation set (10 questions) — sufficient to demonstrate the retrieval improvement, but not a comprehensive benchmark
-- Fixed-size chunking (500 chars) doesn't respect document structure (tables, section boundaries) — semantic/structure-aware chunking is a likely next improvement
-- Single document tested — generalization to multi-document corpora untested
-- Hybrid fusion uses a fixed alpha weight (0.5); could be tuned per query type
+- Small evaluation set (10 questions): sufficient to demonstrate the retrieval improvement, but not a comprehensive benchmark
+- Fixed-size chunking (500 chars) doesn't respect document structure (tables, section boundaries): structure-aware chunking is a likely next improvement
+- Single document tested: generalization to multi-document corpora untested
+- Hybrid fusion uses a fixed alpha weight (0.5): could be tuned per query type
 
 ## Possible Extensions
 
